@@ -1,103 +1,119 @@
 import Image from "next/image";
+import profileImg from "@/images/2.png";
+import msocImg from "@/images/MSOC.jpg";
+import ImageGallery from "!@/components/ImageGallery";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="w-full min-h-screen bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-[#ededed] font-sans">
+      {/* Star Section */}
+  <section className="relative h-screen w-full bg-cover bg-center" style={{backgroundImage: 'url("/images/background.png")'}}>
+        <nav className="flex items-center justify-between pt-12 px-8 fixed w-full z-10">
+          <h2 className="text-[35px] tracking-wide cursor-pointer text-[#b1ff99] hover:text-cadetblue transition">Shiina <span className="text-aqua hover:text-[#FF4A47] transition">Kochiya</span></h2>
+          <div>
+            <ul className="flex gap-4">
+              <li><a href="#projects" className="text-[#FF4A47] font-bold capitalize hover:text-aquamarine transition">Projects</a></li>
+              <li><a href="#contact" className="text-[#FF4A47] font-bold capitalize hover:text-aquamarine transition">Contact</a></li>
+              <li><a href="#ext-projects" className="text-[#FF4A47] font-bold capitalize hover:text-aquamarine transition">External Projects</a></li>
+              <li><a href="https://ca-25-shiinakochiyas-projects.vercel.app" className="text-[#FF4A47] font-bold capitalize hover:text-aquamarine transition">CA25</a></li>
+            </ul>
+          </div>
+          <a href="https://github.com/ShiinaKochiya/sakura-page" className="bg-[#FF4A47] text-white font-bold py-2 px-6 rounded-full hover:bg-white hover:text-[#FF4A47] border-2 border-transparent transition" target="_blank" rel="noopener noreferrer">Source code</a>
+        </nav>
+        <div className="absolute top-1/2 left-[8%] -translate-y-1/2">
+          <h4 className="text-white text-xl mb-2">Hello, my name is</h4>
+          <h1 className="text-white text-5xl mb-4">Việt Hưng</h1>
+          <h3 className="text-white text-2xl mb-8">&quot;Someday, our dreams will come true&quot;</h3>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="w-full py-24 bg-[#181818] flex justify-center">
+        <div className="flex items-center justify-around w-full max-w-5xl mx-auto">
+          <Image src={profileImg} alt="Profile" width={320} height={400} className="rounded-xl" />
+          <div className="max-w-xl ml-8">
+            <h2 className="text-white text-5xl mb-4">About me:</h2>
+            <h5 className="text-white text-xl mb-4"><span>&quot;For we, are the Dreamchasers&quot;</span></h5>
+            <p className="text-aliceblue text-lg mb-6">My name is Việt Hưng, also goes by the name Shiina Kochiya (シイナ • コチヤ), Paul Vincent and Sakura (my very old name)</p>
+            <p className="text-aliceblue text-lg mb-6">Am a hobby-programmer, freelance cosplay photographer and artist. I do join projects here and there if it sparks my interest.</p>
+            <p className="text-aliceblue text-lg mb-6">Co-leader of CA25, content creator of <a href="https://www.facebook.com/NoiKhongVoi0San" className="underline">&quot;Nói không với 0 Sanity&quot;</a> and <a href="https://www.facebook.com/profile.php?id=100088578633362" className="underline">&quot;Một cái trang sìn A, M và S&quot;</a>, also a member of <a href="https://github.com/arknights-vns" className="underline">Arknights Vietnam Station</a> organization and <a href="https://github.com/team-nameless" className="underline">team-nameless*/MSOC</a></p>
+            <p className="text-aliceblue text-lg mb-6">I can use JavaScript/React/Node, Java, Lua, Python. On my way to learn C# and C++</p>
+            <a href="/about" className="bg-[#FF4A47] text-white font-bold py-2 px-6 rounded-full shadow hover:bg-white hover:text-[#FF4A47] border-2 border-transparent transition">More about me</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="bg-white w-full py-24">
+        <div className="mb-8 text-center">
+          <h2 className="text-black text-5xl mb-8">My coding projects</h2>
+        </div>
+        <div className="flex justify-center items-center min-h-[400px] gap-8">
+          {/* Angelina-chan */}
+          <div className="bg-[#D0D0D0] rounded-3xl p-8 w-[335px] h-[365px] text-center shadow-lg flex flex-col justify-between">
+            <i className="fa-solid fa-bars text-[50px] text-[#FF4A47] mb-4"></i>
+            <h5 className="text-[#33A2B1] text-xl mb-2">Discord bot: Angelina-chan</h5>
+            <div>
+              <p className="text-black text-base mb-4">An Arknights operator stats and fun Discord bot. Written in Node.js</p>
+              <a className="bg-[#FF4A47] text-white font-bold py-2 px-6 rounded-full hover:bg-white hover:text-black border-2 border-[#FF4A47] transition" href="https://github.com/ShiinaKochiya/angelina-chan-sc" target="_blank" rel="noopener noreferrer">Read More</a>
+            </div>
+          </div>
+          {/* BalaKnights */}
+          <div className="bg-[#D0D0D0] rounded-3xl p-8 w-[335px] h-[365px] text-center shadow-lg flex flex-col justify-between">
+            <i className="fa-solid fa-bars text-[50px] text-[#FF4A47] mb-4"></i>
+            <h5 className="text-[#33A2B1] text-xl mb-2">Balatro mod: BalaKnights</h5>
+            <div>
+              <p className="text-black text-base mb-4">A simple Balatro mod, adding a few Jokers and Deck based on Arknights characters. Written in Lua</p>
+              <a className="bg-[#FF4A47] text-white font-bold py-2 px-6 rounded-full hover:bg-white hover:text-black border-2 border-[#FF4A47] transition" href="https://github.com/ShiinaKochiya/BalaKnights" target="_blank" rel="noopener noreferrer">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photography Section */}
+      <section id="photography" className="w-full py-24 bg-[#181818]">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-center text-white text-4xl mb-8">My photography gallery</h1>
+          <div className="flex gap-6 justify-center flex-wrap mb-10" id="gallery">
+            <ImageGallery filepath="/images/album" count="18"/>
+          </div>
+          <a href="https://www.facebook.com/media/set/?set=a.1467500564223975&type=3" className="text-white text-center block">&gt; Full album here on my Facebook &lt;</a>
+        </div>
+      </section>
+
+      {/* External Projects Section */}
+      <section id="ext-projects" className="py-10 px-4">
+        <div className="mb-8 text-center">
+          <h2 className="text-black text-4xl mb-8">External projects I joined</h2>
+        </div>
+        <div className="flex gap-6 items-center justify-between max-w-5xl mx-auto">
+          <div className="flex-1 min-w-[220px]">
+            <h3 className="text-black text-lg mb-4">Arknights Vietnam Station (A9VNS) Offline event: The show must go on - Photographer</h3>
+            <h3 className="text-black text-lg mb-4">MSOC (maimai Student Open Cup) - Front-end Developer, Photographer, Referee</h3>
+            <h3 className="text-black text-lg mb-4">Project VNS: Dreamchasers - Tournament Consultant, Front-end Developer, MC, Minigame Designer, Photographer</h3>
+            <h3 className="text-black text-lg mb-4">TUYUcord Server Cover - <a href="https://youtu.be/nn8197ta-1Y?si=sXZosK-DSv75HqHG" className="text-black underline">らべられっ子 / Compared Child</a></h3>
+            <h3 className="text-black text-lg mb-4">Nguoi Anh Em™️ Mega-collab: <a href="https://youtu.be/ChiuKbz7oGk?si=fxoeN6Xun2cPBUYj" className="text-black underline">Get High</a> - Layout builder</h3>
+          </div>
+          <Image src={msocImg} alt="MSOC" width={600} height={400} className="rounded-xl max-w-[600px] w-[45vw] h-auto object-cover" />
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="w-full h-[290px] bg-[#151515] flex flex-col items-center justify-center">
+        <p className="text-white text-2xl font-bold mb-6">Want to contact me?</p>
+        <a className="bg-[#FF4A47] text-white font-bold py-2 px-6 rounded-full hover:bg-transparent hover:text-[#FF4A47] border-2 border-[#FF4A47] transition" href="mailto:caovanviethung1412@gmail.com">Send me an Email if you need anything</a>
+      </section>
+
+      {/* Footer */}
+      <footer className="relative w-full py-8 bg-white dark:bg-[#0a0a0a]">
+        <p className="mb-4">Connections:</p>
+        <div className="flex gap-4 justify-center">
+          <a href="https://www.facebook.com/ShiinaKochiya/" target="_blank" rel="noopener noreferrer" className="text-2xl"><i className="fa-brands fa-facebook"></i></a>
+          <a href="https://x.com/ShiinaKochiya" target="_blank" rel="noopener noreferrer" className="text-2xl"><i className="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UCrn9I5aDXQ5Azk_K0_9EqYg" target="_blank" rel="noopener noreferrer" className="text-2xl"><i className="fa-brands fa-youtube"></i></a>
+          <a href="https://github.com/ShiinaKochiya" target="_blank" rel="noopener noreferrer" className="text-2xl"><i className="fa-brands fa-github"></i></a>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
