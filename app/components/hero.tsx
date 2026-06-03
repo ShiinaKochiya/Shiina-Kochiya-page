@@ -19,6 +19,7 @@ export default function Hero({}){
     <div className="relative items-center justify-center font-sans bg-white h-auto">
       <div className="absolute bg-linear-to-r from-transparent via-black to-black w-7/8 h-full right-0 z-2"/>
       <div className="absolute bg-linear-to-l from-transparent to-black w-1/4 h-full left-0 z-2"/>
+      <div className="absolute bg-linear-to-b from-transparent to-black w-full h-1/4 bottom-0 z-2"/>
       <Image 
         src={background}  
         alt={"Background image"}
