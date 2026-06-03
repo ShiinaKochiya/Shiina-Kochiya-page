@@ -24,11 +24,13 @@ export default function Hero({}){
         src={background}  
         alt={"Background image"}
         className="w-full"
+        loading="eager"
         />
       <Image 
       src={sidebar}
       alt="sidebar"
       className="right-0 top-0 h-full w-auto absolute z-5"
+      loading="eager"
       />
       <div className="absolute top-[20%] right-[9%] z-6">
         <h3 className="font-aldrich text-white text-6xl">
