@@ -17,13 +17,16 @@ export default function Home() {
       className="right-0 top-0 h-full w-auto absolute z-5"
       />
       <div className="absolute top-[20%] right-[9%] z-6">
-        <h3 className="font-aldrich text-white text-6xl font-bold weight-200">
+        <h3 className="font-aldrich text-white text-6xl">
           Shiina Kochiya
         </h3>
         <p className="font-yasashisa text-white text-xl text-center mr-12">
         シイナ • コチヤ
         </p>
       </div>
+      <h2 className=" absolute top-[30%] right-[9%] font-aldrich text-white text-4xl mt-4 w-1/3 z-6 text-right">
+          Code, Photography and everything that sparks interest
+        </h2>
     </div>
   );
 }
