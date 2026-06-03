@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/*Loading custom fonts*/
+@font-face {
+  font-family: 'Aldrich';
+  src: url('/fonts/Aldrich-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Yasashisa Gothic';
+  src: url('/fonts/YasashisaGothicBold-V2.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,5 +38,23 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Aldrich', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .font-aldrich {
+    font-family: 'Aldrich', Arial, Helvetica, sans-serif;
+  }
+  .font-yasashisa {
+    font-family: 'Yasashisa Gothic', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
