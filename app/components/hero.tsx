@@ -17,23 +17,29 @@ import facebook from "#/socials/facebook.png"
 export default function Hero({}){
      return (
     <div>
+      {/*View - PC*/}
       <div className="relative items-center justify-center font-sans bg-white h-auto hidden lg:block">
+        {/*Gradients*/}
         <div className="absolute bg-linear-to-r from-transparent via-black to-black w-7/8 h-full right-0 z-2"/>
         <div className="absolute bg-linear-to-l from-transparent to-black w-1/4 h-full left-0 z-2"/>
         <div className="absolute bg-linear-to-b from-transparent to-black w-full h-1/4 bottom-0 z-2"/>
+        {/*Background*/}
         <Image 
           src={background}  
           alt={"Background image"}
           className="w-full"
           loading="eager"
           />
+        {/*Sidebar*/}
         <Image 
         src={sidebar}
         alt="sidebar"
         className="right-0 top-0 h-full w-auto absolute z-5"
         loading="eager"
         />
-        <div className="absolute top-[20%] right-[9%] z-6">
+
+        {/*Texts - Name*/}
+        <div className="absolute top-[18%] right-[9%] z-6">
           <h3 className="font-aldrich text-white text-6xl">
             Shiina Kochiya
           </h3>
@@ -41,12 +47,14 @@ export default function Hero({}){
           シイナ • コチヤ 
           </p>
         </div>
-        <h3 className=" absolute top-[30%] right-[9%] font-aldrich text-white text-4xl mt-4 w-5/13 z-6 text-right">
+        
+        {/*Texts - Quote*/}
+        <h3 className=" absolute top-[31%] right-[9%] font-aldrich text-white text-4xl mt-4 w-5/13 z-6 text-right">
             <span className="text-cyan-300">Code</span>, <span className="text-orange-400">Photography</span> and everything that sparks <span className="text-emerald-400">interest</span>
         </h3> 
 
-
-        <div className="absolute top-[50%] right-[9%] z-6 w-full">
+        {/*Buttons*/}
+        <div className="absolute top-[54%] right-[9%] z-6 w-full">
           <Link href={"https://github.com/ShiinaKochiya/angelina-chan-sc"} className="absolute right-0">
             <Image 
               src={angeButton}
@@ -70,7 +78,8 @@ export default function Hero({}){
           </Link>
         </div>
 
-        <div className="absolute top-[70%] right-[9%] z-6 flex flex-row">
+        {/*Socials*/}
+        <div className="absolute top-[73%] right-[9%] z-6 flex flex-row">
           <Link href={"https://ca-25-shiinakochiyas-projects.vercel.app"} className="h-10 w-auto cursor-pointer mx-2">
           <Image
             src={ca25}
@@ -94,6 +103,16 @@ export default function Hero({}){
           </Link>
         </div>
       </div>
+
+
+
+        {/**Big fatass ahh space so I dont have to find
+        * "Yo wheres the mobile view"
+        */}
+
+
+
+      {/*View - Smaller than PC viewport*/}
       <div className="w-full h-auto from-black to-gray-800 text-white text-center lg:hidden">
         <Image 
           src={background}  
