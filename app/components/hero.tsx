@@ -18,7 +18,7 @@ export default function Hero({}){
      return (
     <div>
       {/*View - PC*/}
-      <div className="relative items-center justify-center font-sans bg-white h-auto hidden lg:block">
+      <div className="relative items-center justify-center font-sans bg-black h-auto hidden lg:block">
         {/*Gradients*/}
         <div className="absolute bg-linear-to-r from-transparent via-black to-black w-7/8 h-full right-0 z-2"/>
         <div className="absolute bg-linear-to-l from-transparent to-black w-1/4 h-full left-0 z-2"/>
@@ -112,7 +112,7 @@ export default function Hero({}){
 
 
 
-      {/*View - Smaller than PC viewport*/}
+      {/*View - Mobile*/}
       <div className="w-full h-auto bg-black text-white text-center lg:hidden">
        {/**Background and overlay */} 
         <div className="relative">
@@ -143,12 +143,26 @@ export default function Hero({}){
         </div>
 
         {/**Buttons */}
-        <div className="relative w-full h-40">
-          <Link href={"https://github.com/ShiinaKochiya/angelina-chan-sc"} className="absolute">
+        <div className="relative w-full h-auto my-10 items-center">
+          <Link href={"https://github.com/ShiinaKochiya/angelina-chan-sc"}>
             <Image 
               src={angeButton}
               alt="ange"
-              className="h-15 w-auto cursor-pointer"
+              className="h-15 w-auto cursor-pointer mx-auto"
+            />
+          </Link>
+          <Link href={"https://github.com/ShiinaKochiya/balaknights"}>
+            <Image 
+              src={balaButton}
+              alt="balaknights"
+              className="h-15 w-auto cursor-pointer mx-auto"
+            />
+          </Link>
+          <Link href={"/photo"}>
+            <Image 
+              src={photoButton}
+              alt="photo"
+              className="h-15 w-auto cursor-pointer mx-auto"
             />
           </Link>
         </div>
