@@ -113,13 +113,27 @@ export default function Hero({}){
 
 
       {/*View - Smaller than PC viewport*/}
-      <div className="w-full h-auto from-black to-gray-800 text-white text-center lg:hidden">
-        <Image 
-          src={background}  
-          alt={"Background image"}
-          className="w-full"
-          loading="eager"
-        />
+      <div className="w-full h-auto bg-black text-white text-center lg:hidden">
+       {/**Background and overlay */} 
+        <div className="relative">
+          <Image 
+            src={background}  
+            alt={"Background image"}
+            className="w-full"
+            loading="eager"
+          />
+          <div className="absolute bg-linear-to-b from-transparent to-black w-full h-full bottom-0 z-2"/>
+        </div>
+
+        {/**Text */}
+        <div className="relative mt-10 bg-black right-[50%%] z-6">
+          <h3 className="font-aldrich text-white text-6xl">
+            Shiina Kochiya
+          </h3>
+          <p className="font-yasashisa text-white text-xl text-center mr-12">
+          シイナ • コチヤ 
+          </p>
+        </div>
       </div>
     </div>
   );
