@@ -58,3 +58,20 @@ body {
     scrollbar-width: none;  /* Firefox */
   }
 }
+@keyframes slide{
+  0% {
+    background-position-x: 0px;
+}
+100% {
+    background-position-x: -206px;
+  }
+}
+
+@keyframes slider{
+  0% {
+    background-position-x: 0px;
+}
+100% {
+    background-position-x: 206px;
+  }
+}
