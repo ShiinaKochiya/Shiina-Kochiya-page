@@ -125,7 +125,7 @@ export default function Hero({}){
           <div className="absolute bg-linear-to-b from-transparent to-black w-full h-full bottom-0 z-2"/>
         </div>
 
-        {/**Text */}
+        {/**Text - Name*/}
         <div className="relative mt-10 bg-black right-[50%%] z-6">
           <h3 className="font-aldrich text-white text-6xl">
             Shiina Kochiya
@@ -134,6 +134,26 @@ export default function Hero({}){
           シイナ • コチヤ 
           </p>
         </div>
+
+        {/*Texts - Quote*/}
+        <div className="w-full flex justify-center">
+          <h3 className="relative font-aldrich text-white text-4xl mt-4 w-3/4 z-6 text-center">
+              <span className="text-cyan-300">Code</span>, <span className="text-orange-400">Photography</span> and everything that sparks <span className="text-emerald-400">interest</span>
+          </h3>
+        </div>
+
+        {/**Buttons */}
+        <div className="relative w-full h-40">
+          <Link href={"https://github.com/ShiinaKochiya/angelina-chan-sc"} className="absolute">
+            <Image 
+              src={angeButton}
+              alt="ange"
+              className="h-15 w-auto cursor-pointer"
+            />
+          </Link>
+        </div>
+
+
       </div>
     </div>
   );
