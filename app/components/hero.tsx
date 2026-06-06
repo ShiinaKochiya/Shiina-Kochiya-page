@@ -167,7 +167,30 @@ export default function Hero({}){
           </Link>
         </div>
 
-
+        {/*Socials*/}
+        <div className="relative flex justify-center my-10">
+          <Link href={"https://ca-25-shiinakochiyas-projects.vercel.app"} className="h-10 w-auto cursor-pointer mx-2">
+          <Image
+            src={ca25}
+            alt="CA25"
+            className="h-10 w-auto cursor-pointer mx-2"
+          />
+          </Link>
+          <Link href={"https://github.com/ShiinaKochiya"} className="h-10 w-auto cursor-pointer mx-2">
+          <Image
+            src={github}
+            alt="GitHub"
+            className="h-10 w-auto cursor-pointer mx-2"
+          />
+          </Link>
+          <Link href={"https://www.facebook.com/ShiinaKochiya"} className="h-10 w-auto cursor-pointer mx-2">
+          <Image
+            src={facebook}
+            alt="Facebook"
+            className="h-10 w-auto cursor-pointer mx-2"
+          />
+          </Link>
+        </div>
       </div>
     </div>
   );
