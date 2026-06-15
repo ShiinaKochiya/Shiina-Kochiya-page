@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import type { GalleryNode } from "@/app/backend/getGallery";
+import Link from "next/link";
 import AlbumTile from "@/app/components/AlbumTile";
 import PhotoGrid from "@/app/components/PhotoGrid";
 
@@ -105,6 +106,7 @@ export default function GalleryClient({ galleries }: Props) {
   return (
     <div className="p-6">
       <div className="mb-4 flex items-center gap-4">
+        <Link href={"/"} className={"p-1 px-2 rounded-md text-white bg-gray-500"}>Return to main</Link>
         <button
           onClick={() => {
             if (selectedAlbum) {
@@ -123,7 +125,7 @@ export default function GalleryClient({ galleries }: Props) {
           {selectedAlbum
             ? `Album: ${selectedAlbum.info?.name || selectedAlbum.name}`
             : pathStack.length === 0
-            ? "Home"
+            ? "Album: Home"
             : `Album: ${currentNode?.info?.name || pathStack[pathStack.length - 1]}`}
         </div>
       </div>

@@ -31,7 +31,7 @@ export default function AlbumTile({ name, node, onOpen }: Props) {
     <button onClick={onOpen} className="relative h-100 rounded overflow-hidden bg-gray-200 focus:outline-none">
       {/* If info.cover is array, render a small grid of covers for folder preview */}
       {Array.isArray(info?.cover) && info.cover.length > 0 ? (
-        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0">
+        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0 bg-stone-800">
           {info.cover.slice(0, 4).map((c: string, i: number) => {
             const infoPath = node.images[node.images.length - 1] || "";
             const dir = infoPath.replace(/\\/g, "/").replace(/\/info.json$/i, "");
