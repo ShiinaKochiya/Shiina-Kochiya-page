@@ -69,7 +69,7 @@ export default function Hero({}){
               className="h-15 w-auto cursor-pointer"
             />
           </Link>
-          <Link href={"/photo"} className="absolute right-86.75 top-[26.75px]">
+          <Link href={"/album"} className="absolute right-86.75 top-[26.75px]">
             <Image 
               src={photoButton}
               alt="photo"
@@ -158,7 +158,7 @@ export default function Hero({}){
               className="h-15 w-auto cursor-pointer mx-auto"
             />
           </Link>
-          <Link href={"/photo"}>
+          <Link href={"/album"}>
             <Image 
               src={photoButton}
               alt="photo"
