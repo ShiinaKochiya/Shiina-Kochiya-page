@@ -46,7 +46,7 @@ export default function PhotoGrid({ images }: Props) {
       <div className="masonry-sm">
         {images.map((src) => (
           <div key={src} className="break-inside mb-2 cursor-pointer" onClick={() => setSelected(src)}>
-            <Image src={src} width={800} height={600} className="w-full object-cover rounded" />
+            <Image src={src} width={800} height={600} className="w-full object-cover rounded" alt=""/>
           </div>
         ))}
       </div>

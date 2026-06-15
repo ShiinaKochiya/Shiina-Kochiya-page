@@ -1,13 +1,9 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
+import type { GalleryNode } from "@/app/backend/getGallery";
 import AlbumTile from "@/app/components/AlbumTile";
 import PhotoGrid from "@/app/components/PhotoGrid";
-
-export interface GalleryNode {
-  images: string[];
-  children: Record<string, GalleryNode>;
-}
 
 interface Props {
   galleries: GalleryNode;
