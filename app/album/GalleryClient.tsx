@@ -106,7 +106,7 @@ export default function GalleryClient({ galleries }: Props) {
   return (
     <div className="p-6">
       <div className="mb-4 flex items-center gap-4">
-        <Link href={"/"} className={"p-1 px-2 rounded-md text-white bg-gray-500"}>Return to main</Link>
+        <Link href={"/"} className={"p-1 px-2 rounded-md text-white bg-gray-500"}>Return to Portfolio</Link>
         <button
           onClick={() => {
             if (selectedAlbum) {

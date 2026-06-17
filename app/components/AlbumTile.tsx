@@ -31,7 +31,19 @@ export default function AlbumTile({ name, node, onOpen }: Props) {
     <button onClick={onOpen} className="relative h-100 rounded overflow-hidden bg-gray-200 focus:outline-none">
       {/* If info.cover is array, render a small grid of covers for folder preview */}
       {Array.isArray(info?.cover) && info.cover.length > 0 ? (
-        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0 bg-stone-800">
+        (() => {
+          const count = info.cover.length;
+          let gridCols = "grid-cols-2";
+          let gridRows = "grid-rows-2";
+          if (count === 1) {
+            gridCols = "grid-cols-1";
+            gridRows = "grid-rows-1";
+          } else if (count === 2) {
+            gridCols = "grid-cols-1";
+            gridRows = "grid-rows-2";
+          }
+          return (
+            <div className={`absolute inset-0 grid ${gridCols} ${gridRows} gap-0 bg-stone-800`}>
           {info.cover.slice(0, 4).map((c: string, i: number) => {
             const infoPath = node.images[node.images.length - 1] || "";
             const dir = infoPath.replace(/\\/g, "/").replace(/\/info.json$/i, "");
@@ -40,6 +52,8 @@ export default function AlbumTile({ name, node, onOpen }: Props) {
             return <img key={i} src={url} className="w-full h-full object-cover" />;
           })}
         </div>
+                );
+        })()
       ) : coverUrl ? (
         <div className="absolute inset-0 bg-center bg-cover" style={{ backgroundImage: `url(${coverUrl})` }} />
       ) : null}
