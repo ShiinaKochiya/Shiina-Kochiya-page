@@ -16,6 +16,6 @@ Thank you to the followings:
 - [ ] Responsive (Important!)
 - [ ] Finishing the remaining sections
 - [ ] Moving [`port.shiinakochiya.space`](https://port.shiinakochiya.space) to [`shiinakochiya.space`](https://shiinakochiya.space), and move the old [`shiinakochiya.space`](https://shiinakochiya.space) to `old.shiinakochiya.space`
-- [ ] Gallery (Could use Cloudflare bucket, now I know about it)
+- [X] Gallery (Could use Cloudflare bucket, now I know about it)
 - [X] Cuddles Angelina (Always) 
 - [X] Awwoo! 
